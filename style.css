@@ -1,0 +1,366 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background-color: #2a2a2a;
+    text-align: center;
+    color: white;
+    letter-spacing: 0.7px;
+    line-height: 50px;
+    font-size: 30px;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    height: 640px;
+}
+
+footer {
+    margin-top: 200px;
+    width: 100%;
+    height: 100px;
+    background-color: #2a2a2a;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+}
+footer > div{
+    line-height: 100px;
+}
+footer > div:first-child{
+    margin-left: 50px;
+}
+footer > div:last-child{
+    margin-right: 50px;
+}
+.fa-github{
+    margin: 0 10px;
+}
+.container {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.full-slider{
+    position: relative;
+    margin: 0 auto;
+    width: 1375px;
+    overflow: hidden;
+}
+.search {
+    max-width: 1440px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.card {
+    display: flex;
+    height: 460px;
+    width: 320px;
+    background-color: #17141d;
+    border-radius: 10px;
+    box-shadow: -1rem 0 3rem #000;
+    /*   margin-left: -50px; */
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 0px;
+}
+
+.card:hover {
+    transform: translateY(-20px);
+    transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-out;
+}
+
+.title {
+    color: white;
+    font-weight: 300;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+}
+
+.bar {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    height: 5px;
+    width: 150px;
+}
+
+.emptybar {
+    background-color: #2e3033;
+    width: 100%;
+    height: 100%;
+}
+
+.filledbar {
+    position: absolute;
+    top: 0px;
+    z-index: 3;
+    width: 0px;
+    height: 100%;
+    background: rgb(0, 154, 217);
+    background: linear-gradient(90deg, rgba(0, 154, 217, 1) 0%, rgba(217, 147, 0, 1) 65%, rgba(255, 186, 0, 1) 100%);
+    transition: 0.6s ease-out;
+}
+
+.card:hover .filledbar {
+    width: 120px;
+    transition: 0.4s ease-out;
+}
+
+.circle {
+    position: absolute;
+    top: 150px;
+    left: calc(50% - 60px);
+}
+
+.stroke {
+    stroke: white;
+    stroke-dasharray: 360;
+    stroke-dashoffset: 360;
+    transition: 0.6s ease-out;
+}
+
+svg {
+    fill: #17141d;
+    stroke-width: 2px;
+}
+
+.card:hover .stroke {
+    stroke-dashoffset: 100;
+    transition: 0.6s ease-out;
+}
+
+.swiper-container {
+    height: 100%;
+    width: 1320px;
+    padding: 20px 0;
+    overflow: visible;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    width: 300px !important;
+    height: 500px;
+    background-color: white;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15) !important;
+    border-radius: 20px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    transition-duration: 0.5s;
+}
+
+.swiper-slide > img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.swiper-slide > .poster-bottom {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 200px;
+}
+
+.swiper-slide > .poster-top {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    top: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 160px 60px;
+    border-bottom-right-radius: 160px 60px;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15) !important;
+}
+
+.swiper-slide:hover {
+    transform: translateY(-10px);
+}
+
+.link-name {
+    width: 200px;
+    font-size: 15px;
+    color: black;
+    margin: 0 auto;
+    margin-top: 20px;
+    max-height: 45px;
+    overflow: hidden;
+}
+
+.stars {
+    display: flex;
+    margin: 0 auto;
+    width: 123px;
+}
+
+.stars > div {
+    margin: 0 5px;
+}
+
+.data-block {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+    font-size: 13px;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.data-block > div {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.data-block > div > p {
+    margin: 0 !important;
+}
+
+.data-block > div > p:first-child {
+    color: rgb(214, 214, 214);
+}
+
+#next {
+    right: 0;
+}
+
+#prev {
+    left: 0;
+}
+
+.error-text {
+    text-align: center;
+    color: red;
+    font-size: 20px;
+}
+
+.icons {
+    position: absolute;
+    right: 170px;
+}
+
+.fa-times {
+    visibility: hidden;
+    font-size: 18px;
+}
+
+.fa-times, .fa-search {
+    cursor: pointer;
+}
+
+/*LOADER*/
+.loader {
+    display: none;
+    border: 1px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 1px solid #3498db;
+    width: 20px;
+    height: 20px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*LOADER*/
+
+@media screen and (max-width: 1440px) {
+    .swiper-container {
+        width: 980px;
+    }
+    .full-slider{
+        width: 1035px;
+    }
+    .search {
+        width: 100%;
+    }
+    .icons{
+        right: 11%;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .swiper-container {
+        width: 640px;
+    }
+    .full-slider{
+        width: 695px;
+    }
+}
+@media screen and (max-width: 760px) {
+    .swiper-container {
+        width: 300px;
+    }
+    .full-slider{
+        width: 355px;
+    }
+    footer {
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+        font-size: 18px;
+    }
+    footer > div:first-child, footer > div:last-child {
+        margin: 0;
+    }
+
+}
+@media screen and (max-width: 400px) {
+    .full-slider{
+        width: 100%;
+        min-width: 320px;
+    }
+}

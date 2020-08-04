@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MovieSearch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/swiper/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<header>MovieSearch</header>
+<main>
+    <div class="search">
+        <form class="form-inline d-flex justify-content-center md-form form-sm" style = 'text-align: center; padding-top: 25px;'>
+            <input class="form-control form-control-sm mr-3 w-75" id="search" type="text" autocomplete="off" style="    width: 200px; height: 20px;         border: solid #2a2a2a 1px;"
+                   placeholder="Search"
+                   aria-label="Search">
+            <div class="icons">
+                <div class="loader" id="loader"></div>
+                <i class="fas fa-times" id="cross-icon"></i>
+                <i class="fas fa-search" aria-hidden="true" id="search-icon"></i>
+            </div>
+        </form>
+        <p class="error-text" id="error-text"></p>
+    </div>
+    <div class="full-slider">
+        <div class="swiper-container">
+            <div class="swiper-wrapper" id="swiper-wrapper"></div>
+        </div>
+        <div class="swiper-button-next" id="next"></div>
+        <div class="swiper-button-prev" id="prev"></div>
+    </div>
+</main>
+<footer>
+    <div>RS school 2020g1</div>
+    <div><i class="fab fa-github"></i>https://github.com/alexzhelyazko</div>
+</footer>
+<script src="node_modules/swiper/js/swiper.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
